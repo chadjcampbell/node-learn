@@ -7,7 +7,7 @@ function capitalize(string) {
   return string
     .trim()
     .toLowerCase()
-    .split()
+    .split(" ")
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ");
 }
