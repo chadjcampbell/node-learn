@@ -14,6 +14,11 @@ function capitalize(string) {
 
 http
   .createServer((req, res) => {
+    if (req.url.includes("favicon.ico")) {
+      res.statusCode = 404;
+      res.end("Not Found");
+      return;
+    }
     console.log(req.url);
     const nameArg = capitalize(
       req.url
